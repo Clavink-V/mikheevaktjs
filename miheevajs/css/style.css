@@ -1,0 +1,429 @@
+/* Общие стили */
+body {
+    font-family: 'Minecraft', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #313131;
+    color: #fff;
+    line-height: 1.6;
+    background-image: url('../images/bg.png');
+    background-attachment: fixed;
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('../fonts/Minecraft.woff2') format('woff2'),
+         url('../fonts/Minecraft.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    background-color: #3b3b3b;
+    padding: 1rem 0;
+    border-bottom: 4px solid #5a5a5a;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-block {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-family: 'Minecraft', sans-serif;
+    font-size: 2rem;
+    color: #ffaa00;
+    text-shadow: 2px 2px 0 #555;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #ffaa00;
+    color: #000;
+}
+
+main {
+    padding: 8rem 2rem 2rem;
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #3b3b3b;
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 4px solid #5a5a5a;
+    margin-top: 2rem;
+}
+
+/* Стили для главной страницы */
+.home-page .hero {
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    background-color: rgba(59, 59, 59, 0.8);
+    border: 4px solid #5a5a5a;
+    border-radius: 8px;
+}
+
+.home-page h1 {
+    font-size: 2.5rem;
+    color: #ffaa00;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 0 #555;
+}
+
+.home-page p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.minecraft-character {
+    width: 100px;
+    height: 180px;
+    position: relative;
+    margin: 2rem auto;
+    transform-origin: center bottom;
+}
+
+.head {
+    width: 80px;
+    height: 80px;
+    background-color: #ffdbac;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border: 2px solid #000;
+}
+
+.body {
+    width: 80px;
+    height: 60px;
+    background-color: #4682b4;
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    border: 2px solid #000;
+}
+
+.arm {
+    width: 20px;
+    height: 50px;
+    background-color: #87ceeb;
+    position: absolute;
+    top: 85px;
+    border: 2px solid #000;
+}
+
+.left-arm {
+    left: -10px;
+    transform-origin: top right;
+}
+
+.right-arm {
+    right: -10px;
+    transform-origin: top left;
+}
+
+.leg {
+    width: 20px;
+    height: 50px;
+    background-color: #4169e1;
+    position: absolute;
+    top: 140px;
+    border: 2px solid #000;
+}
+
+.left-leg {
+    left: 20px;
+    transform-origin: top right;
+}
+
+.right-leg {
+    right: 20px;
+    transform-origin: top left;
+}
+
+#jump-btn {
+    background-color: #5a5a5a;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Minecraft', sans-serif;
+    border: 2px solid #ffaa00;
+}
+
+#jump-btn:hover {
+    background-color: #ffaa00;
+    color: #000;
+}
+
+.blocks-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.block {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+    background-size: cover;
+}
+
+/* Стили для страницы игры */
+.game-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.feature {
+    background-color: rgba(59, 59, 59, 0.8);
+    border: 4px solid #5a5a5a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 300px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    border-color: #ffaa00;
+}
+
+.block-animation {
+    width: 100px;
+    height: 100px;
+    margin: 1rem auto;
+    image-rendering: pixelated;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.block-animation[data-block="diamond"] {
+    background-image: url('../images/blocks/diamond.png');
+}
+
+.block-animation[data-block="brick"] {
+    background-image: url('../images/blocks/brick.png');
+}
+
+.block-animation[data-block="crafting-table"] {
+    background-image: url('../images/blocks/crafting_table.png');
+}
+
+.key-instructions {
+    text-align: center;
+    margin: 2rem 0;
+    font-style: italic;
+    color: #aaa;
+}
+
+.inventory {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 5px;
+    width: 450px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: rgba(59, 59, 59, 0.8);
+    border: 4px solid #5a5a5a;
+    border-radius: 8px;
+}
+
+.inventory-slot {
+    width: 48px;
+    height: 48px;
+    background-color: #8b8b8b;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.inventory-slot img {
+    width: 40px;
+    height: 40px;
+    image-rendering: pixelated;
+}
+
+/* Стили для страницы мобов */
+.mob-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.filter-btn {
+    background-color: #5a5a5a;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Minecraft', sans-serif;
+    border: 2px solid transparent;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #ffaa00;
+    color: #000;
+    border-color: #000;
+}
+
+.mobs-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.mob-card {
+    background-color: rgba(59, 59, 59, 0.8);
+    border: 4px solid #5a5a5a;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.mob-card:hover {
+    transform: scale(1.05);
+    border-color: #ffaa00;
+}
+
+.mob-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    margin-bottom: 1rem;
+}
+
+.mob-details {
+    display: flex;
+    margin-top: 2rem;
+    background-color: rgba(59, 59, 59, 0.8);
+    border: 4px solid #5a5a5a;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.mob-viewer {
+    flex: 1;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mob-viewer img {
+    max-width: 100%;
+    max-height: 300px;
+    image-rendering: pixelated;
+}
+
+.mob-info {
+    flex: 2;
+    padding-left: 2rem;
+}
+
+/* Анимации */
+@keyframes jump {
+    0%, 100% { transform: translateY(0) scaleY(1); }
+    50% { transform: translateY(-50px) scaleY(0.9); }
+}
+
+@keyframes armSwing {
+    0%, 100% { transform: rotate(0); }
+    50% { transform: rotate(-30deg); }
+}
+
+@keyframes legKick {
+    0%, 100% { transform: rotate(0); }
+    50% { transform: rotate(20deg); }
+}
+
+@keyframes blockRotate {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes mobFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header-block {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .logo {
+        margin-bottom: 1rem;
+    }
+    
+    main {
+        padding: 7rem 1rem 1rem;
+    }
+    
+    .game-features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mob-details {
+        flex-direction: column;
+    }
+    
+    .mob-info {
+        padding-left: 0;
+        padding-top: 1.5rem;
+    }
+}

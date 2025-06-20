@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft - Об игре</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="game-page">
+    <header>
+        <div class="header-block">
+            <div class="logo">Minecraft</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="game.html" class="active">Игра</a></li>
+                    <li><a href="mobs.html">Мобы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Особенности игры</h1>
+        
+        <div class="game-features">
+            <div class="feature" id="mining-feature">
+                <h2>Добыча ресурсов</h2>
+                <div class="block-animation" data-block="diamond"></div>
+                <p>Добывайте различные блоки и руды для создания инструментов и построек.</p>
+            </div>
+            
+            <div class="feature" id="building-feature">
+                <h2>Строительство</h2>
+                <div class="block-animation" data-block="brick"></div>
+                <p>Создавайте удивительные сооружения из различных блоков.</p>
+            </div>
+            
+            <div class="feature" id="crafting-feature">
+                <h2>Крафтинг</h2>
+                <div class="block-animation" data-block="crafting-table"></div>
+                <p>Создавайте инструменты, оружие и другие полезные предметы.</p>
+            </div>
+        </div>
+        
+        <div class="key-instructions">
+            <p>Используйте клавиши M, B и C для быстрого перехода к разделам</p>
+        </div>
+        
+        <div class="inventory" id="inventory">
+            <!-- Будет заполнено JavaScript -->
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2023 Minecraft. Все права защищены.</p>
+    </footer>
+    
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

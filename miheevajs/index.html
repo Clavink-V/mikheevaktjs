@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft - Официальный сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home-page">
+    <header>
+        <div class="header-block">
+            <div class="logo">Minecraft</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="game.html">Игра</a></li>
+                    <li><a href="mobs.html">Мобы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Добро пожаловать в Minecraft</h1>
+            <p>Исследуй, создавай и выживай в бесконечном мире кубов!</p>
+            <div class="minecraft-character" id="character">
+                <div class="head"></div>
+                <div class="body"></div>
+                <div class="arm left-arm"></div>
+                <div class="arm right-arm"></div>
+                <div class="leg left-leg"></div>
+                <div class="leg right-leg"></div>
+            </div>
+            <button id="jump-btn">Заставить прыгать</button>
+        </section>
+        
+        <section class="blocks-container" id="blocks-container"></section>
+    </main>
+    
+    <footer>
+        <p>© 2023 Minecraft. Все права защищены.</p>
+    </footer>
+    
+    <script src="js/home.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
